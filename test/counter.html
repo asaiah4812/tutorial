@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+
+    <style>
+        section{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        button{
+            color: white;
+            padding: 0.4rem 1rem;
+            border: none;
+            border-radius: 10px;
+        }
+        span{
+            font-size: 20px;
+            font-weight: 700;
+        }
+        button:nth-of-type(1){
+            background: blue;
+        }
+        button:hover:nth-of-type(1){
+            background: rgb(75, 75, 198);
+        }
+        button:nth-of-type(2){
+            background: purple;
+        }
+        button:hover:nth-of-type(2){
+            background: rgb(186, 74, 186);
+        }
+        button:nth-of-type(3){
+            background: red;
+        }
+        button:hover:nth-of-type(3){
+            background: rgb(170, 67, 67);
+        }
+
+    </style>
+    <section>
+        <div>
+            <button onclick="addNum()">Add</button>
+            <span>0</span>
+            <button onclick="reduceNum()">Reduce</button>
+            <button onclick="resetNum()">Reset</button>
+        </div>
+
+    </section>
+    <script>
+        let number = 0
+        let span = document.querySelector('span')
+        function addNum(){
+            number += 1
+            span.innerHTML = number
+        }
+        function reduceNum(){
+            number -= 1
+            span.innerHTML = number
+        }
+        function resetNum(){
+            number = 0
+            span.innerHTML = number
+        }
+    </script>
+</body>
+</html>

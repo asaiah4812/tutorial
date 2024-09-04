@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-size: 20px;
+    }
+    a{
+        text-decoration: none;
+    }
+    a:hover{
+        color: green;
+    }
+    nav{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 15px;
+        background: rgb(223, 224, 226);
+    }
+    .right{
+        display: flex;
+        gap: 10px;
+
+    }
+    .menu{
+        display: none;
+    }
+    @media(max-width:600px){
+        .right{
+        display: none;
+    }
+    .menu{
+        display: block;
+    }
+    }
+    .sidebar{
+        position: fixed;
+        right: 0;
+        height: 60vh;
+        top:0;
+        display: none;
+        flex-direction: column;
+        z-index: 1;
+        background: black;
+        gap: 1rem;
+
+        padding-top: 4rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .sidebar a{
+        
+        color: white;
+
+
+    }
+
+    .sidebar a:hover{
+        color: red;
+    }
+</style>
+<body>
+    <nav>
+        <div class="left">Logo</div>
+        <div class="right">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="sidebar">
+            <button onclick="closeSidebar()">🌟</button>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <div onclick="showSidebar()" class="menu">
+            📆
+        </div>
+    </nav>
+    <script>
+        let sidebar = document.querySelector('.sidebar')
+        function showSidebar(){
+            sidebar.style.display = 'flex'
+        }
+        function closeSidebar(){
+            sidebar.style.display = 'none'
+        }
+    </script>
+</body>
+</html>

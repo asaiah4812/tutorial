@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    input{
+        padding: 10px;
+    }
+    button{
+        background: blue;
+        color: white;
+        border: none;
+        padding: 10px;
+    }
+</style>
+<body>
+    <input type="text" class="input" placeholder="Enter Your year">
+    <button onclick="CalAge()">calulate</button>
+    <div>
+        <h1></h1>
+    </div>
+    <script>
+        let h1 = document.querySelector('h1');
+        let input = document.querySelector('.input')
+        let year = 2024
+        function CalAge() {
+            let cal = year - input.value
+            h1.innerHTML = cal.toString()
+        }
+    </script>
+</body>
+</html>
