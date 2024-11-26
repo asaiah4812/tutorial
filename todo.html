@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Todo App</title>
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <div class="form">
+                <input type="text" id="todo"> <button onclick="addTodoFunc()">Add Todo</button>
+            </div>
+            <ul id="todolist">
+             
+            </ul>
+    
+        </div>
+
+    </section>
+    <script>
+
+        let todo = document.getElementById('todo')
+        let todolist = document.getElementById('todolist')
+        function addTodoFunc(){
+            if (todo.value === ''){
+                alert('You most put a todo')
+            }else{
+                let li  = document.createElement('li')
+                let span = document.createElement('span')
+                li.innerHTML = todo.value
+                todolist.appendChild(li)
+                span.innerHTML = 'delete'
+                li.appendChild(span)
+            }
+            todo.value = ''; 
+        }
+
+        document.addEventListener("click", function(e){
+            if(e.target.tagName === "SPAN"){
+                e.target.parentElement.remove()
+            } else if (e.target.tagName === "LI"){
+                e.target.classList.toggle("checked") 
+            }
+        })
+
+    </script>
+
+</body>
+</html>

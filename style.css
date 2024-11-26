@@ -1,0 +1,71 @@
+*{
+    margin: none;
+    padding: none;
+    box-sizing: border-box;
+}
+
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container{
+    background: silver;
+    border-radius: 20px;
+    padding: 20px;
+    height: 20rem;
+}
+
+.form{
+    display: flex;
+    gap: 5px;
+    background: grey;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.form input{
+    padding: 10px;
+    background: none;
+    border: none;
+    outline: none;
+    color: white;
+}
+
+.form button{
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background: skyblue;
+    color:black;
+    padding: 5px 10px;
+}
+#todolist{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 5px;
+}
+
+li{
+    display: flex;
+    justify-content: space-between;
+    background: slategray;
+    color: white;
+    list-style: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+span{
+    background: red;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.checked{
+    text-decoration: line-through;
+}
